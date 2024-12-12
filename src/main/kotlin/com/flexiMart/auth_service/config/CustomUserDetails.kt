@@ -4,7 +4,9 @@ import com.flexiMart.auth_service.domain.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.stereotype.Component
 
+@Component
 data class CustomUserDetails(private val user: User):UserDetails {
     override fun getAuthorities(): Collection<GrantedAuthority> {
        return listOf(SimpleGrantedAuthority(user.role?.name ?: "ROLE_DEFAULT"))
