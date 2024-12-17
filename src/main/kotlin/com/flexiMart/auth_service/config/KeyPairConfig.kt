@@ -37,13 +37,13 @@ class KeyPairConfig {
         return JWKSource { jwkSelector, _ -> jwkSelector.select(jwkSet) }
     }
 
-    private fun generateRsa(): RSAKey {
-        val publicKey = keyPair.public as RSAPublicKey
-        val privateKey = keyPair.private as RSAPrivateKey
-
-        return RSAKey.Builder(publicKey)
-            .privateKey(privateKey)
-            .keyID(UUID.randomUUID().toString())
-            .build()
-    }
+//    private fun generateRsa(): RSAKey {
+//        val publicKey = keyPair.public as RSAPublicKey
+//        val privateKey = keyPair.private as RSAPrivateKey
+//
+//        return RSAKey.Builder(publicKey)
+//            .privateKey(privateKey)
+//            .keyID(UUID.randomUUID().toString())
+//            .build()
+//    }
 }
